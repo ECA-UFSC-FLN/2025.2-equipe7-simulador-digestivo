@@ -17,7 +17,7 @@ O sistema busca reproduzir a digestão em três compartimentos distintos: boca, 
 - **Equipe:** Equipe 7 
 
 
-git clone https://github.com/projetos-eca/2025.2-equipe1-nome-projeto.git
+git clone https://github.com/projetos-eca/2025.2-equipe7-nome-projeto.git
 
 # Acessar a pasta
 cd 2025.1-equipe1-nome-projeto
