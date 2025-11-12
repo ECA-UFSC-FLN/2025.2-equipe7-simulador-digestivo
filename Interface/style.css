@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #007bff;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.info-grid div {
+    padding: 5px 0;
+}
+
+.unit {
+    font-size: 0.8em;
+    color: #666;
+}
+
+input[type="number"] {
+    width: 80px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #28a745; /* Verde para Iniciar */
+    color: white;
+}
+.btn-primary:hover { background-color: #218838; }
+
+.btn-secondary {
+    background-color: #ffc107; /* Amarelo para Pausar */
+    color: #333;
+}
+.btn-secondary:hover { background-color: #e0a800; }
+
+.btn-danger {
+    background-color: #dc3545; /* Vermelho para Parar */
+    color: white;
+}
+.btn-danger:hover { background-color: #c82333; }
+
+.btn-small {
+    padding: 7px 10px;
+    font-size: 0.9em;
+}
+
+.btn-update {
+    background-color: #007bff;
+    color: white;
+}
+.btn-update:hover { background-color: #0056b3; }
+
+
+.atuadores-status {
+    margin-top: 15px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.atuadores-status span {
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin: 3px;
+    font-size: 0.9em;
+}
+
+.status-running { background-color: #d4edda; color: #155724; } /* Verde claro */
+.status-paused { background-color: #fff3cd; color: #856404; } /* Amarelo claro */
+.status-stopped { background-color: #f8d7da; color: #721c24; } /* Vermelho claro */
+.status-off { background-color: #e2e6ea; color: #383d41; }
+.status-on { background-color: #d4edda; color: #155724; }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #eee;
+    color: #666;
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}

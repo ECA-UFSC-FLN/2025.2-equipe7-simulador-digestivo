@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biorreator Digestão Humana - IHM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Biorreator de Digestão Humana</h1>
+        <p>Monitoramento e Controle de Processos</p>
+    </header>
+
+    <main>
+        <section class="status-geral">
+            <h2>Status Geral do Sistema</h2>
+            <div class="info-grid">
+                <div><strong>Experimento:</strong> <span id="expName">Não Definido</span></div>
+                <div><strong>Status:</strong> <span id="systemStatus" class="status-running">Iniciando...</span></div>
+                <div><strong>Fase Atual:</strong> <span id="currentPhase">N/A</span></div>
+                <div><strong>Tempo na Fase:</strong> <span id="phaseTime">00:00:00</span></div>
+                <div><strong>Tempo Total:</strong> <span id="totalTime">00:00:00</span></div>
+            </div>
+            <div class="actions">
+                <button id="btnStart" class="btn btn-primary">Iniciar</button>
+                <button id="btnPause" class="btn btn-secondary">Pausar</button>
+                <button id="btnStop" class="btn btn-danger">Parar Emergência</button>
+            </div>
+        </section>
+
+        <section class="frasco-monitor" id="frascoEstomago">
+            <h2>Frasco: Estômago</h2>
+            <div class="info-grid">
+                <div><strong>pH:</strong> <span id="phEstomago">N/A</span> <span class="unit"></span></div>
+                <div><strong>Temp:</strong> <span id="tempEstomago">N/A</span> <span class="unit">°C</span></div>
+                <div><strong>Set pH:</strong> <input type="number" id="setPhEstomago" value="2.0" step="0.1"></div>
+                <div><strong>Set Temp:</strong> <input type="number" id="setTempEstomago" value="37.0" step="0.1"></div>
+                <div><button class="btn btn-small btn-update" data-frasco="estomago">Atualizar Setpoints</button></div>
+            </div>
+            <div class="atuadores-status">
+                <span>Aquecedor: <span id="heaterEstomago" class="status-off">Desligado</span></span>
+                <span>Agitador: <span id="stirrerEstomago" class="status-off">Desligado</span></span>
+                <span>Bomba Ácido: <span id="pumpAcidEstomago" class="status-off">Desligada</span></span>
+            </div>
+        </section>
+
+        <section class="frasco-monitor" id="frascoIntestino">
+            <h2>Frasco: Intestino</h2>
+            <div class="info-grid">
+                <div><strong>pH:</strong> <span id="phIntestino">N/A</span> <span class="unit"></span></div>
+                <div><strong>Temp:</strong> <span id="tempIntestino">N/A</span> <span class="unit">°C</span></div>
+                <div><strong>Set pH:</strong> <input type="number" id="setPhIntestino" value="7.0" step="0.1"></div>
+                <div><strong>Set Temp:</strong> <input type="number" id="setTempIntestino" value="37.0" step="0.1"></div>
+                <div><button class="btn btn-small btn-update" data-frasco="intestino">Atualizar Setpoints</button></div>
+            </div>
+            <div class="atuadores-status">
+                <span>Aquecedor: <span id="heaterIntestino" class="status-off">Desligado</span></span>
+                <span>Agitador: <span id="stirrerIntestino" class="status-off">Desligado</span></span>
+                <span>Bomba Base: <span id="pumpBaseIntestino" class="status-off">Desligada</span></span>
+            </div>
+        </section>
+
+        <section class="reservatorios">
+            <h2>Reservatórios</h2>
+            <div class="info-grid">
+                <div><strong>Ácido:</strong> <span id="resAcid">100%</span></div>
+                <div><strong>Base:</strong> <span id="resBase">100%</span></div>
+                <div><strong>Enzimas:</strong> <span id="resEnzymes">100%</span></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025.2 Projeto Integrador - Engenharia de Controle e Automação</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
